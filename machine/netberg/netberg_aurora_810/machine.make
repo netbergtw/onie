@@ -26,21 +26,23 @@ I2CTOOLS_SYSEEPROM = no
 
 # Console parameters
 CONSOLE_SPEED = 115200
-CONSOLE_DEV = 0
+CONSOLE_DEV = 1
 CONSOLE_FLAG = 0
 
 # Enable UEFI support
 UEFI_ENABLE = yes
-RECOVERY_DEFAULT_ENTRY = embed
+RECOVERY_DEFAULT_ENTRY = rescue
 
 # Set Linux kernel version
-LINUX_VERSION = 4.9
-LINUX_MINOR_VERSION = 95
+LINUX_VERSION = 5.4
+LINUX_MINOR_VERSION = 86
 
 GCC_VERSION = 8.3.0
 
 # Set uClibc-ng version
 XTOOLS_LIBC_VERSION = 1.0.35
+
+include $(MACHINEDIR)/rootconf/grub-machine.make
 
 #-------------------------------------------------------------------------------
 #
